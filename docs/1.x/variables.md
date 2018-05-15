@@ -19,6 +19,7 @@ to make your life easier.
 - arguments to [filters](filters.html)
 
 `$vars` keyword support is enabled by default, to disable it use `Opis\JsonSchema\Validator::varsSupport(false)`.
+{:.alert.alert-info}
 
 ## General structure
 
