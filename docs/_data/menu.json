@@ -1,0 +1,60 @@
+{
+    "1.x": [
+        {
+            "title": "Opis Json Schema",
+            "pages": [
+                {
+                    "title": "About",
+                    "url": "/1.x/",
+                    "description": "About this library"
+                },
+                {
+                    "title": "Quick start",
+                    "url": "/1.x/quick-start.html",
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "title": "Key concepts",
+            "pages": [
+                {
+                    "title": "Pointers",
+                    "url": "/1.x/pointers.html",
+                    "description": ""
+                },
+                {
+                    "title": "Variables",
+                    "url": "/1.x/variables.html",
+                    "description": ""
+                },
+                {
+                    "title": "Filters",
+                    "url": "/1.x/filters.html",
+                    "description": ""
+                },
+                {
+                    "title": "Mappers",
+                    "url": "/1.x/mappers.html",
+                    "description": "Advanced schema reuse"
+                },
+                {
+                    "title": "Loaders",
+                    "url": "/1.x/loaders.html",
+                    "description": "Fetch schemas"
+                },
+                {
+                    "title": "Formats",
+                    "url": "/1.x/formats.html",
+                    "description": "Custom data formats"
+                },
+                {
+                    "title": "Media types",
+                    "url": "/1.x/media-types.html",
+                    "description": "Validate text & binary formats"
+                }
+            ]
+        }
+    ]
+}
+
