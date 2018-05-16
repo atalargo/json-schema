@@ -16,13 +16,82 @@
             ]
         },
         {
-            "title": "Key concepts",
+            "title": "Basics",
+            "pages": [
+                {
+                    "title": "Generics",
+                    "url": "/1.x/generics.html",
+                    "description": "Metadata and generic validation keywords"
+                },
+                {
+                    "title": "Types",
+                    "url": "/1.x/types.html",
+                    "description": "Introduction to json schema types"
+                },
+                {
+                    "title": "String type",
+                    "url": "/1.x/string.html",
+                    "description": "Keywords for string type"
+                },
+                {
+                    "title": "Number type",
+                    "url": "/1.x/number.html",
+                    "description": "Keywords for number type"
+                },
+                {
+                    "title": "Integer type",
+                    "url": "/1.x/integer.html",
+                    "description": "Description for integer type"
+                },
+                {
+                    "title": "Boolean type",
+                    "url": "/1.x/boolean.html",
+                    "description": "Description for boolean type"
+                },
+                {
+                    "title": "Null type",
+                    "url": "/1.x/null.html",
+                    "description": "Description for null type"
+                },
+                {
+                    "title": "Object type",
+                    "url": "/1.x/object.html",
+                    "description": "Keywords for object type"
+                },
+                {
+                    "title": "Array type",
+                    "url": "/1.x/array.html",
+                    "description": "Keywords for array type"
+                },
+                {
+                    "title": "Formats",
+                    "url": "/1.x/formats.html",
+                    "description": "Default formats"
+                }
+            ]
+        },
+        {
+            "title": "Reusability",
             "pages": [
                 {
                     "title": "Pointers",
                     "url": "/1.x/pointers.html",
+                    "description": "Schema referencing"
+                },
+                {
+                    "title": "Sub schema",
+                    "url": "",
                     "description": ""
                 },
+                {
+                    "title": "Con"
+                }
+            ]
+        },
+        {
+            "title": "Advanced",
+            "pages": [
+
                 {
                     "title": "Variables",
                     "url": "/1.x/variables.html",
@@ -39,11 +108,6 @@
                     "description": "Advanced schema reuse"
                 },
                 {
-                    "title": "Loaders",
-                    "url": "/1.x/loaders.html",
-                    "description": "Fetch schemas"
-                },
-                {
                     "title": "Formats",
                     "url": "/1.x/formats.html",
                     "description": "Custom data formats"
@@ -52,6 +116,11 @@
                     "title": "Media types",
                     "url": "/1.x/media-types.html",
                     "description": "Validate text & binary formats"
+                },
+                {
+                    "title": "Loaders",
+                    "url": "/1.x/loaders.html",
+                    "description": "Fetch schemas"
                 }
             ]
         }
