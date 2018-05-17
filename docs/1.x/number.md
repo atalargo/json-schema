@@ -10,6 +10,24 @@ keywords: opis, php, json, schema, number, validation, integer, float
 
 The `number` type is used for validating integer and float values.
 
+```json
+{
+  "type": "number"
+}
+```
+
+`5` - valid (integer)
+{:.alert.alert-success}
+
+`-10.8` - valid (float)
+{:.alert.alert-success}
+
+`"123"` - invalid (is string)
+{:.alert.alert-danger}
+
+`null` - invalid (is null)
+{:.alert.alert-danger}
+
 ## Validation keywords
 
 The following keywords are supported by the `number` type, and evaluated
@@ -27,6 +45,8 @@ Value of this keyword must be a number (integer or float).
   "minimum": 10.5
 }
 ```
+Valid if the number is at least `10.5`.
+{:.blockquote-footer}
 
 `11` - valid (greater)
 {:.alert.alert-success}
@@ -53,6 +73,8 @@ then the `minimum` keyword is required and is used as reference for comparison.
   "exclusiveMinimum": 10.5
 }
 ```
+Valid if the number is greater than `10.5`.
+{:.blockquote-footer}
 
 `11` - valid (greater)
 {:.alert.alert-success}
@@ -73,6 +95,8 @@ then the `minimum` keyword is required and is used as reference for comparison.
   "exclusiveMinimum": true
 }
 ```
+Valid if the number is greater than `10.5`.
+{:.blockquote-footer}
 
 `11` - valid (greater)
 {:.alert.alert-success}
@@ -98,6 +122,8 @@ Value of this keyword must be a number (integer or float).
   "maximum": 10.5
 }
 ```
+Valid if the number is at most `10.5`.
+{:.blockquote-footer}
 
 `10` - valid (lower)
 {:.alert.alert-success}
@@ -124,6 +150,8 @@ then the `maximum` keyword is required and is used as reference for comparison.
   "exclusiveMaximum": 10.5
 }
 ```
+Valid if the number is lower than `10.5`.
+{:.blockquote-footer}
 
 `10` - valid (lower)
 {:.alert.alert-success}
@@ -144,6 +172,8 @@ then the `maximum` keyword is required and is used as reference for comparison.
   "exclusiveMaximum": true
 }
 ```
+Valid if the number is lower than `10.5`.
+{:.blockquote-footer}
 
 `10` - valid (lower)
 {:.alert.alert-success}
@@ -169,6 +199,8 @@ Value of this keyword must be a strictly positive number (zero is not allowed).
   "multipleOf": 0.5
 }
 ```
+Valid if the number divides `0.5` exactly.
+{:.blockquote-footer}
 
 `10` - valid (10 / 0.5 = 20)
 {:.alert.alert-success}

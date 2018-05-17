@@ -10,7 +10,7 @@ keywords: opis, php, json, schema, formats, date, time, email
 
 The `format` keyword performs a semantic validation on data.
 The value of this keyword must be a string, representig a format.
-This keyword behavior depends on the data type, meaning that
+The keyword behavior depends on the data type, meaning that
 the same format name for a `string` behaves differently on a `number`,
 or is missing, because not all data types must implement a format and
 usually different data types have different formats.
@@ -36,7 +36,11 @@ usually different data types have different formats.
 
 ## Provided formats
 
-Opis Json Schema provides the following formats for `string` type
+Opis Json Schema provides the following formats for `string` type.
+
+Please note that formats starting with `idn-` require [PHP intl extension](http://php.net/manual/en/book.intl.php){:target=_blank} 
+to work correctly.
+{:.alert.alert-info}
 
 ### date
 
@@ -153,6 +157,28 @@ valid e-mail address format.
 {:.alert.alert-success}
 
 `"john(at)example.com"` - invalid
+{:.alert.alert-danger}
+
+### idn-email
+
+A string is valid against this format if it represents a
+valid idn e-mail address format.
+
+```json
+{
+    "type": "string",
+    "format": "idn-email"
+}
+```
+
+`"실례@실례.테스트"` - valid
+{:.alert.alert-success}
+
+`"john@example.com"` - valid
+{:.alert.alert-success}
+
+
+`"1234"` - invalid
 {:.alert.alert-danger}
 
 ### hostname

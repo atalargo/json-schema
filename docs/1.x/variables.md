@@ -291,7 +291,7 @@ if ($result->isValid()) {
 else {
     /** @var ValidationError $error */
     $err = $result->getFirstError();
-    echo "Invalid, error: ", $err->error(), PHP_EOL;
+    echo "Invalid, error: ", $err->keyword(), PHP_EOL;
 }
 ```
 

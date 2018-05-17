@@ -6,9 +6,33 @@ description: php opis json schema validation of arrays
 keywords: opis, php, json, schema, array, validation
 ---
 
-# Object type
+# Array type
 
 The `array` type is used for validating ordered lists (indexed arrays).
+
+```json
+{
+  "type": "array"
+}
+```
+
+`[]` - valid (empty array)
+{:.alert.alert-success}
+
+`[2, 1, "str", false, null, {}]` - valid
+{:.alert.alert-success}
+
+`12` - invalid (is integer/number)
+{:.alert.alert-danger}
+
+`null` - invalid (is null)
+{:.alert.alert-danger}
+
+`"1, 2, 3"` - invalid (is string)
+{:.alert.alert-danger}
+
+`{"0": 1, "1": 2, "2": 3}` - invalid (is object)
+{:.alert.alert-danger}
 
 ## Validation keywords
 

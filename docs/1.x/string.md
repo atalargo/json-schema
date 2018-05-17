@@ -11,6 +11,24 @@ keywords: opis, php, json, schema, string, text, validation, pattern, regex, mim
 The `string` type is used for validating strings/texts containing
 Unicode characters.
 
+```json
+{
+  "type": "string"
+}
+```
+
+`"some text"` - valid
+{:.alert.alert-success}
+
+`""` - valid (empty string)
+{:.alert.alert-success}
+
+`12` - invalid (is integer/number)
+{:.alert.alert-danger}
+
+`null` - invalid (is null)
+{:.alert.alert-danger}
+
 Please note that in order to calculate the length of a string,
 Opis Json Schema uses the following libraries/functions, 
 depending which one is available on your system: 
@@ -40,6 +58,9 @@ Value of this keyword must be a non-negative integer.
 }
 ```
 
+Valid if contains at least `3` characters.
+{:.blockquote-footer}
+
 `"abc"` - valid (length = 3)
 {:.alert.alert-success}
 
@@ -61,6 +82,9 @@ Value of this keyword must be a non-negative integer.
   "maxLength": 3
 }
 ```
+
+Valid if contains at most `3` characters.
+{:.blockquote-footer}
 
 `"ab"` - valid (length < 3)
 {:.alert.alert-success}
@@ -91,6 +115,10 @@ and the modifier is `u` ([PCRE_UTF8](http://php.net/manual/en/reference.pcre.pat
   "pattern": "^opis\\/[a-z-]+$"
 }
 ```
+
+Valid if starts with `opis/` and is followed by either `-` (minus sign) or a lower case letter
+between `a` and `z`. The rest of the string can be any character.
+{:.blockquote-footer}
 
 `"opis/json-schema"` - valid
 {:.alert.alert-success}
@@ -124,7 +152,8 @@ Currently, there can only be two values for this keyword
   "contentEncoding": "base64"
 }
 ```
-
+Valid if contains only characters inside the base64 alphabet.
+{:.blockquote-footer}
 
 `"b3Bpcy9qc29uLXNjaGVtYQ=="` - valid (decodes to `"opis/json-schema"`)
 {:.alert.alert-success}
@@ -152,6 +181,9 @@ If you want to add new media types (MIME types), please read about [Media Types]
   "contentMediaType": "application/json"
 }
 ```
+Valid if the string contains valid JSON syntax.
+{:.blockquote-footer}
+
 `"{\"a\": 1}"` - valid (json object)
 {:.alert.alert-success}
 
@@ -180,6 +212,10 @@ If you want to add new media types (MIME types), please read about [Media Types]
   "contentMediaType": "application/json"
 }
 ```
+Valid if contains only characters inside base64 alphabet, and the base64 decoded
+content contains valid JSON syntax.
+{:.blockquote-footer}
+
 `"eyJhIjogMX0="` - valid (decodes to `"{\"a\": 1}"` which is a json object)
 {:.alert.alert-success}
 

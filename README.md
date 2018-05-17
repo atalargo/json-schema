@@ -319,7 +319,7 @@ if ($result->isValid()) {
 else {
     /** @var ValidationError $error */
     $error = $result->getFirstError();
-    echo "Invalid, error: ", $error->error(), PHP_EOL;
+    echo "Invalid, error: ", $error->keyword(), PHP_EOL;
 }
 
 ```
@@ -368,7 +368,7 @@ if ($result->isValid()) {
 else {
     /** @var ValidationError $error */
     $err = $result->getFirstError();
-    echo "Invalid e-mail, error: ", $err->error(), PHP_EOL;
+    echo "Invalid e-mail, error: ", $err->keyword(), PHP_EOL;
 }
 
 /** @var ValidationResult $result */
@@ -383,7 +383,7 @@ if ($result->isValid()) {
 else {
     /** @var ValidationError $error */
     $err = $result->getFirstError();
-    echo "Invalid simple-person, error: ", $err->error(), PHP_EOL;
+    echo "Invalid simple-person, error: ", $err->keyword(), PHP_EOL;
 }
 ```
 
@@ -449,7 +449,7 @@ if ($result->isValid()) {
 else {
     /** @var ValidationError $error */
     $err = $result->getFirstError();
-    echo "Invalid, error: ", $err->error(), PHP_EOL;
+    echo "Invalid, error: ", $err->keyword(), PHP_EOL;
 }
 ```
 
@@ -501,7 +501,7 @@ if ($result->isValid()) {
 else {
     /** @var ValidationError $error */
     $err = $result->getFirstError();
-    echo "Invalid, error: ", $err->error(), PHP_EOL;
+    echo "Invalid, error: ", $err->keyword(), PHP_EOL;
 }
 ```
 

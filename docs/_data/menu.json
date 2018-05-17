@@ -19,14 +19,14 @@
             "title": "Basics",
             "pages": [
                 {
-                    "title": "Generics",
-                    "url": "/1.x/generics.html",
-                    "description": "Metadata and generic validation keywords"
+                    "title": "Structure",
+                    "url": "/1.x/structure.html",
+                    "description": "Json Schema structure and metadata keywords"
                 },
                 {
-                    "title": "Types",
-                    "url": "/1.x/types.html",
-                    "description": "Introduction to json schema types"
+                    "title": "Generics",
+                    "url": "/1.x/generics.html",
+                    "description": "Generic validation keywords"
                 },
                 {
                     "title": "String type",
@@ -67,12 +67,37 @@
                     "title": "Formats",
                     "url": "/1.x/formats.html",
                     "description": "Default formats"
+                },
+                {
+                    "title": "Default value",
+                    "url": "/1.x/default-value.html",
+                    "description": "Default value keyword"
+                },
+                {
+                    "title": "Conditional subschemas",
+                    "url": "/1.x/conditional-subschemas.html",
+                    "description": "Keywords for applying conditional subschemas"
+                },
+                {
+                    "title": "Multiple subschemas",
+                    "url": "/1.x/multiple-subschemas.html",
+                    "description": "Keywords for applying multiple subschemas"
                 }
             ]
         },
         {
             "title": "Reusability",
             "pages": [
+                {
+                    "title": "References",
+                    "url": "/1.x/ref-keyword.html",
+                    "description": "$ref keyword"
+                },
+                {
+                    "title": "Definitions",
+                    "url": "/1.x/definitions.html",
+                    "description": "definitions keyword"
+                },
                 {
                     "title": "Pointers",
                     "url": "/1.x/pointers.html",
@@ -89,38 +114,62 @@
             ]
         },
         {
-            "title": "Advanced",
+            "title": "Advanced features",
             "pages": [
-
                 {
                     "title": "Variables",
                     "url": "/1.x/variables.html",
-                    "description": ""
+                    "description": "$vars keyword"
                 },
                 {
                     "title": "Filters",
                     "url": "/1.x/filters.html",
-                    "description": ""
+                    "description": "$filters keyword"
                 },
                 {
                     "title": "Mappers",
                     "url": "/1.x/mappers.html",
-                    "description": "Advanced schema reuse"
+                    "description": "$map keyword"
+                }
+            ]
+        },
+        {
+            "title": "API",
+            "pages": [
+                {
+                    "title": "Validator",
+                    "url": "/1.x/php-validator.html",
+                    "description": "Validator object"
                 },
                 {
-                    "title": "Formats",
-                    "url": "/1.x/formats.html",
-                    "description": "Custom data formats"
+                    "title": "Loader",
+                    "url": "/1.x/php-loader.html",
+                    "description": "Loader object"
                 },
                 {
-                    "title": "Media types",
-                    "url": "/1.x/media-types.html",
-                    "description": "Validate text & binary formats"
+                    "title": "Creating a new format",
+                    "url": "/1.x/php-create-format.html",
+                    "description": "Create a new json schema format"
                 },
                 {
-                    "title": "Loaders",
-                    "url": "/1.x/loaders.html",
-                    "description": "Fetch schemas"
+                    "title": "Creating a new media type",
+                    "url": "/1.x/php-create-media-type.html",
+                    "description": "Create a new json schema media (MIME) type"
+                },
+                {
+                    "title": "Disabling features",
+                    "url": "/1.x/php-disabling-features.html",
+                    "description": "Disable json schema keywords"
+                },
+                {
+                    "title": "Schema structure",
+                    "url": "/1.x/php-schema.html",
+                    "description": "Internal structure of a schema"
+                },
+                {
+                    "title": "Exceptions",
+                    "url": "/1.x/php-exceptions.html",
+                    "description": "List of exceptions thrown by json schema"
                 }
             ]
         }

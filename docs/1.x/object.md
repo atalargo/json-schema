@@ -10,6 +10,27 @@ keywords: opis, php, json, schema, object, validation
 
 The `object` type is used for validating key-value maps (objects).
 
+```json
+{
+  "type": "object"
+}
+```
+
+`{}` - valid (object with nu properties)
+{:.alert.alert-success}
+
+`{"prop1": "val1", "prop2": 2.5}` - valid
+{:.alert.alert-success}
+
+`12` - invalid (is integer/number)
+{:.alert.alert-danger}
+
+`null` - invalid (is null)
+{:.alert.alert-danger}
+
+`"some text"` - invalid (is string)
+{:.alert.alert-danger}
+
 ## Validation keywords
 
 The following keywords are supported by the `object` type, and evaluated

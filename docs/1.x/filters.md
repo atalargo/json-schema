@@ -8,7 +8,7 @@ keywords: opis, json, schema, filter, $filters, validation
 
 # Filters
 
-Json Schema specification contains a lot of filters to validate data,
+Json Schema specification contains a lot of keywords to validate data,
 but most of them are only for _range check_ (like minimum, maximum, minLength, ...).
 So, what happens if you want to check if something exists in a database?
 Well, there cannot be such thing in json schema because it requires a lot 
@@ -76,7 +76,7 @@ valid the following filters will not be called.
 
 ## Creating filters
 
-A filter is class implementing `Opis\JsonSchema\IFilter` interface.
+A filter is an object of a class implementing `Opis\JsonSchema\IFilter` interface.
 The `validate` method receives two arguments
 - $value: the current value to validate
 - $args: an associative array of variables

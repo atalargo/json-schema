@@ -3,13 +3,13 @@ layout: project
 version: 1.x
 title: Mappers ($map)
 description: reusing json schema using data mappers
-keywords: opis, json, schema, mapper, $map, reuse
+keywords: opis, json, schema, validation, mapper, $map, reuse
 ---
 
 # Mappers
 
 While json schema standard looks very flexible and powerfull,
-it still lacks in providing reusability field. And no, we are not taliking
+it still lacks in providing reusability. And no, we are not talking
 about splitting schema into multiple documents, nor using definitions
 for common validations, these are great, but what happens if you need to change your
 existing data structure, or when you want to use schemas from 3rd parties
@@ -70,7 +70,7 @@ about birthday but contains additional information (email) and
 `standard-user.json` is restricted to name and birthday by `additionalProperties` keyword.
 
 The simplest answer is to map our data structure to
-the 3rd party data structure and then validate. Something like
+the 3rd party data structure and then validate it. Something like
 
 ```json
 {
@@ -89,7 +89,7 @@ to be converted to
 }
 ```
 
-before beeing sent to `standard-user.json`.
+before beeing sent to `standard-user.json` for validation.
 
 We can do that thanks to a new non-standard keyword named `$map`,
 designed for advanced schema reuse.
@@ -287,7 +287,7 @@ Our extended user schema (using `$map` to comply with the 3rd party schemas)
             "items": {
                 "enum": ["create", "read", "update", "delete"]
             }
-        },
+        }
     },
     "required": ["first-name", "last-name", "is-admin", "admin-permissions"],
     "additionalProperties": false,
@@ -329,7 +329,7 @@ So if the data for `extended-user` schema is
 
 the mapped data provided to `user` schema (first item of allOf) will be
 
-```
+```json
 {
     "name": "Opis",
     "active": true
@@ -354,4 +354,5 @@ and the mapped data provided to `user-permissions` schema (second item of allOf)
 }
 ```
 
-Now we are compliant with 3rd party schemas without changing our data structure.
+Now we are compliant with both 3rd party schemas without changing 
+our initial data structure.
